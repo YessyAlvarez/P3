@@ -19,6 +19,7 @@ C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\ProvEventos\
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\ProvEventos\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\ProvEventos\Dominio\obj\Debug\Dominio.dll
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\ProvEventos\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\Dominio\bin\Debug\Dominio.dll.config
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\Dominio\bin\Debug\Dominio.dll
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\Dominio\bin\Debug\Dominio.pdb
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\Dominio\bin\Debug\AccesosDB.dll

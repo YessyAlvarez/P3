@@ -9,5 +9,6 @@ C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\ProvEventos\
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\ProvEventos\AccesosDB\obj\Debug\AccesosDB.pdb
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\AccesosDB\bin\Debug\AccesosDB.dll
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\AccesosDB\bin\Debug\AccesosDB.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\AccesosDB\obj\Debug\AccesosDB.csprojResolveAssemblyReference.cache
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\AccesosDB\obj\Debug\AccesosDB.dll
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\AccesosDB\obj\Debug\AccesosDB.pdb

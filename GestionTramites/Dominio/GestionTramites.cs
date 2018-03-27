@@ -4,11 +4,27 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dominio.ServiceReference;
 
 namespace Dominio
 {
     public class GestionTramites
     {
+
+             
+
+        #region GRUPOS
+
+        public Boolean AddGrupo(string nombreGrupo) {
+            //Verifico que no hay aotro repetido antes de mandarlo al Servicio web?
+            Boolean retorno = true;
+            //Llamo al ws
+            //retorno = a.AddGrupo(nombreGrupo);
+            return retorno;
+        }
+
+        #endregion
+
 
         #region USUARIO
 
@@ -96,5 +112,7 @@ namespace Dominio
             }
             */
         }
+
+      
     }
 }

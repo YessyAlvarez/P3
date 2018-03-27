@@ -1,42 +1,40 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/PerfilAdmin.Master" AutoEventWireup="true" CodeBehind="EliminarGrupo.aspx.cs" Inherits="InterfazWeb.PerfilAdmin.EliminarProveedor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/PerfilAdmin.Master" AutoEventWireup="true" CodeBehind="EliminarGrupo.aspx.cs" Inherits="InterfazWeb.PerfilAdmin.EliminarGrupo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
         <br />
-        Eliminar un Proveedor<br />-----------------------</p>
+        Eliminar un Grupo<br />-----------------------</p>
     <p>
     </p>
-    <asp:Panel ID="PanelBuscarProveedor" runat="server">
+    <asp:Panel ID="PanelBuscarGrupo" runat="server">
         <br />
-        Ingrese RUT del proveedor<br />
-        <asp:TextBox ID="TextBoxIdBuscadorProveedor" runat="server"></asp:TextBox>
+        Seleccione un grupo para eliminar:<br />
+        <asp:DropDownList ID="DropDownListGruposAEliminar" runat="server">
+            <asp:ListItem Selected="True">Grupo 1</asp:ListItem>
+            <asp:ListItem>Grupo 2</asp:ListItem>
+            <asp:ListItem>Grupo 3</asp:ListItem>
+            <asp:ListItem>Grupo 4</asp:ListItem>
+        </asp:DropDownList>
         <br />
-        <asp:Button ID="ButtonBuscarProveedor" runat="server" OnClick="ButtonBuscarProveedor_Click" Text="Buscar" style="height: 26px" />
+        <br />
+        <asp:Button ID="Button_Eliminar_Grupo" runat="server" OnClick="Button_Eliminar_Grupo_Click" Text="Eliminar este grupo" />
+        <br />
         <br />
         <br />
     </asp:Panel>
     <p>
     </p>
-    <asp:Panel ID="PanelDatosProveedor" runat="server">
+    <asp:Panel ID="PanelDatosGrupo" runat="server">
         <br />
-        Nombre completo:
+        Nombre Grupo:
         <asp:Label ID="LabelNombre" runat="server" Text="Label"></asp:Label>
-        <br />
-        Fecha Ingreso:
-        <asp:Label ID="LabelFechaIngreso" runat="server" Text="Label"></asp:Label>
-        <br />
-        VIP:
-        <asp:Label ID="LabelVIP" runat="server" Text="Label"></asp:Label>
-        <br />
-        Arancel VIP:
-        <asp:Label ID="LabelArancel" runat="server" Text="Label"></asp:Label>
         <br />
         <br />
         <br />
         ¿Seguro decea eliminar este proveedor?<br />
         <br />
-        <asp:Button ID="ButtonEliminarProveedor" runat="server" Text="Eliminar" OnClick="ButtonEliminarProveedor_Click" />
+        <asp:Button ID="ButtonEliminar" runat="server" Text="Eliminar" OnClick="ButtonEliminarProveedor_Click" />
         <br />
         <br />
         <asp:Button ID="ButtonCancelar" runat="server" Text="Cancelar" OnClick="ButtonCancelar_Click" />
@@ -55,6 +53,7 @@
         <br />
         <br />
         <br />
+        <asp:Button ID="Button_Eliminar_Otro" runat="server" OnClick="Button_Eliminar_Otro_Click" Text="Eliminar otro grupo" />
         <br />
     </asp:Panel>
     <p>

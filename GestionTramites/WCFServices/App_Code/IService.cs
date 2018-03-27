@@ -8,7 +8,17 @@ using Dominio;
 [ServiceContract]
 public interface IService
 {
+    /***    NEWS WCF    ***/
+    [OperationContract]
+    bool WCFAddGrupo(string nombreGrupo);
 
+
+
+
+
+
+
+    /*** OLD ***/
     [OperationContract]
     List<Servicio> WCFAllServiciosWhitTipoEvento();
 
@@ -35,6 +45,9 @@ public interface IService
 
     [OperationContract]
     bool WCFGuardarTxtProveedores();
+
+
+    
 
 
     // TODO: agregue aquí sus operaciones de servicio

@@ -21,7 +21,7 @@ namespace InterfazWeb.PerfilAdmin
 
         protected void ButtonEditarGrupo_Click(object sender, EventArgs e)
         {
-            Response.Redirect("EditarProveedorGrupo.aspx");
+            Response.Redirect("EditarGrupo.aspx");
         }
 
         protected void ButtonEliminarGrupo_Click(object sender, EventArgs e)

@@ -6,6 +6,25 @@ using System.IO;
 // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
 public class Service : IService
 {
+    public bool WCFAddGrupo(string nombreGrupo)
+    {
+        bool retorno = true;
+
+        /**
+         * 
+         * lógica
+         * 
+         **/
+
+        return retorno;
+    }
+
+
+
+
+
+
+
     bool IService.WCFAddProveedor(string nombreCompletoProv, string nombreUsuario, string passw, string nombreFantasia, string email, string telefono, bool esVIP, double valorArancelVIP, List<ProveedorServicio> listaServicios)
     {
         throw new NotImplementedException();

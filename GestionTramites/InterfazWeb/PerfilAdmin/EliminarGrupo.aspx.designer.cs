@@ -13,40 +13,40 @@ namespace InterfazWeb.PerfilAdmin {
     public partial class EliminarGrupo {
         
         /// <summary>
-        /// Control PanelBuscarProveedor.
+        /// Control PanelBuscarGrupo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelBuscarProveedor;
+        protected global::System.Web.UI.WebControls.Panel PanelBuscarGrupo;
         
         /// <summary>
-        /// Control TextBoxIdBuscadorProveedor.
+        /// Control DropDownListGruposAEliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxIdBuscadorProveedor;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListGruposAEliminar;
         
         /// <summary>
-        /// Control ButtonBuscarProveedor.
+        /// Control Button_Eliminar_Grupo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonBuscarProveedor;
+        protected global::System.Web.UI.WebControls.Button Button_Eliminar_Grupo;
         
         /// <summary>
-        /// Control PanelDatosProveedor.
+        /// Control PanelDatosGrupo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelDatosProveedor;
+        protected global::System.Web.UI.WebControls.Panel PanelDatosGrupo;
         
         /// <summary>
         /// Control LabelNombre.
@@ -58,40 +58,13 @@ namespace InterfazWeb.PerfilAdmin {
         protected global::System.Web.UI.WebControls.Label LabelNombre;
         
         /// <summary>
-        /// Control LabelFechaIngreso.
+        /// Control ButtonEliminar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelFechaIngreso;
-        
-        /// <summary>
-        /// Control LabelVIP.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelVIP;
-        
-        /// <summary>
-        /// Control LabelArancel.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelArancel;
-        
-        /// <summary>
-        /// Control ButtonEliminarProveedor.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonEliminarProveedor;
+        protected global::System.Web.UI.WebControls.Button ButtonEliminar;
         
         /// <summary>
         /// Control ButtonCancelar.
@@ -119,5 +92,14 @@ namespace InterfazWeb.PerfilAdmin {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelMensaje;
+        
+        /// <summary>
+        /// Control Button_Eliminar_Otro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Eliminar_Otro;
     }
 }

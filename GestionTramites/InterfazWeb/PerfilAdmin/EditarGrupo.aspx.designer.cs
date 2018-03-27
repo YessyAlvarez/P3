@@ -13,57 +13,66 @@ namespace InterfazWeb.PerfilAdmin {
     public partial class EditarGrupo {
         
         /// <summary>
-        /// Control PanelValorActual.
+        /// Control Panel_Seleccion_Grupo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelValorActual;
+        protected global::System.Web.UI.WebControls.Panel Panel_Seleccion_Grupo;
         
         /// <summary>
-        /// Control TextBoxValorArancel.
+        /// Control DropDownList_Grupos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxValorArancel;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList_Grupos;
         
         /// <summary>
-        /// Control ButtonGuardarArancel.
+        /// Control Button_Editar_Grupo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonGuardarArancel;
+        protected global::System.Web.UI.WebControls.Button Button_Editar_Grupo;
         
         /// <summary>
-        /// Control PanelMensaje.
+        /// Control Panel_Edicion_Grupo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelMensaje;
+        protected global::System.Web.UI.WebControls.Panel Panel_Edicion_Grupo;
         
         /// <summary>
-        /// Control LabelMensaje.
+        /// Control TextBox_Nombre_Grupo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelMensaje;
+        protected global::System.Web.UI.WebControls.TextBox TextBox_Nombre_Grupo;
         
         /// <summary>
-        /// Control ButtonVolver.
+        /// Control Button_Guardar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonVolver;
+        protected global::System.Web.UI.WebControls.Button Button_Guardar;
+        
+        /// <summary>
+        /// Control Button_Cancelar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_Cancelar;
     }
 }

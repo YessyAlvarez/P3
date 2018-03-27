@@ -1,32 +1,38 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/PerfilAdmin.Master" AutoEventWireup="true" CodeBehind="EditarGrupo.aspx.cs" Inherits="InterfazWeb.PerfilAdmin.EditarArancel" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/PerfilAdmin.Master" AutoEventWireup="true" CodeBehind="EditarGrupo.aspx.cs" Inherits="InterfazWeb.PerfilAdmin.EditarGrupo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    Arancel Proveedores<br />
-    --------------------<asp:Panel ID="PanelValorActual" runat="server">
-        <p>
-            &nbsp;</p>
-        <p>
-            El calor actual del arancel para proveedores es de&nbsp;
-            <asp:TextBox ID="TextBoxValorArancel" runat="server"></asp:TextBox>
-        </p>
+    Editar Grupo<br />
+    --------------------<br />
+    <asp:Panel ID="Panel_Seleccion_Grupo" runat="server">
         <br />
-        <asp:Button ID="ButtonGuardarArancel" runat="server" OnClick="ButtonGuardarArancel_Click" Text="Guardar cambios" />
+        Seleccione un Grupo:
+        <asp:DropDownList ID="DropDownList_Grupos" runat="server" OnSelectedIndexChanged="combo_change" Width="72px">
+            <asp:ListItem Selected="True">Grupo 1</asp:ListItem>
+            <asp:ListItem>Grupo 2</asp:ListItem>
+            <asp:ListItem>Grupo 3</asp:ListItem>
+            <asp:ListItem>Grupo 4</asp:ListItem>
+        </asp:DropDownList>
+
+        <br />
+        <asp:Button ID="Button_Editar_Grupo" runat="server" OnClick="Button_Editar_Grupo_Click" Text="Editar Grupo" />
+
+        <br />
         <br />
     </asp:Panel>
     <p></p>
-    <asp:Panel ID="PanelMensaje" runat="server">
+    <asp:Panel ID="Panel_Edicion_Grupo" runat="server">
         <br />
-        <asp:Label ID="LabelMensaje" runat="server"></asp:Label>
+        Nombre:
+        <asp:TextBox ID="TextBox_Nombre_Grupo" runat="server"></asp:TextBox>
         <br />
         <br />
+        <asp:Button ID="Button_Guardar" runat="server" Text="Guardar cambios" />
+        <asp:Button ID="Button_Cancelar" runat="server" OnClick="Button_Cancelar_Click" Text="Cancelar" />
         <br />
-        <asp:Button ID="ButtonVolver" runat="server" OnClick="ButtonVolver_Click" Text="Modificar arancel" />
         <br />
     </asp:Panel>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
    
