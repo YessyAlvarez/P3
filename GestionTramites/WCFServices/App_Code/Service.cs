@@ -19,54 +19,11 @@ public class Service : IService
         return retorno;
     }
 
-
-
-
-
-
-
-    bool IService.WCFAddProveedor(string nombreCompletoProv, string nombreUsuario, string passw, string nombreFantasia, string email, string telefono, bool esVIP, double valorArancelVIP, List<ProveedorServicio> listaServicios)
+    
+    bool IService.WCFGuardarTxt()
     {
         throw new NotImplementedException();
     }
 
-    List<Servicio> IService.WCFAllServiciosWhitTipoEvento()
-    {
-        throw new NotImplementedException();
-    }
-
-    bool IService.WCFChangeArancelAnualProveedor(int arancel)
-    {
-        throw new NotImplementedException();
-    }
-
-    bool IService.WCFChangeDatosProveedor(string idProveedor, DateTime fechaIngreso, bool esVIP, double valorArncelVIP)
-    {
-        throw new NotImplementedException();
-    }
-
-    bool IService.WCFDesactivarProveedor(string rutProveedor)
-    {
-        throw new NotImplementedException();
-    }
-
-    bool IService.WCFGuardarTxtProveedores()
-    {
-        throw new NotImplementedException();
-    }
-
-    int IService.WCFObtenerArancelAnualProveedor()
-    {
-        throw new NotImplementedException();
-    }
-
-    List<Proveedor> IService.WCFShowAllProveedores()
-    {
-        throw new NotImplementedException();
-    }
-
-    Proveedor IService.WCFShowProveedorPorRUT(string nombreRUT)
-    {
-        throw new NotImplementedException();
-    }
+   
 }

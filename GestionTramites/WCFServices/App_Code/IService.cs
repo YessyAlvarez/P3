@@ -15,36 +15,9 @@ public interface IService
 
 
 
-
-
-
-    /*** OLD ***/
+   
     [OperationContract]
-    List<Servicio> WCFAllServiciosWhitTipoEvento();
-
-    [OperationContract]
-    bool WCFAddProveedor(string nombreCompletoProv, string nombreUsuario, string passw, string nombreFantasia, string email, string telefono, bool esVIP, double valorArancelVIP, List<ProveedorServicio> listaServicios);
-
-    [OperationContract]
-    List<Proveedor> WCFShowAllProveedores();
-
-    [OperationContract]
-    Proveedor WCFShowProveedorPorRUT(string nombreRUT);
-
-    [OperationContract]
-    bool WCFChangeDatosProveedor(string idProveedor, DateTime fechaIngreso, bool esVIP, double valorArncelVIP);
-
-    [OperationContract]
-    bool WCFChangeArancelAnualProveedor(int arancel);
-
-    [OperationContract]
-    int WCFObtenerArancelAnualProveedor();
-
-    [OperationContract]
-    bool WCFDesactivarProveedor(string rutProveedor);
-
-    [OperationContract]
-    bool WCFGuardarTxtProveedores();
+    bool WCFGuardarTxt();
 
 
     
