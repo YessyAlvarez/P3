@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace InterfazWeb.Master
+namespace InterfazWeb.PerfilFMantenimiento
 {
-    public partial class PerfilOrganizador : System.Web.UI.MasterPage
+    public partial class AsignarEtapaTramite : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

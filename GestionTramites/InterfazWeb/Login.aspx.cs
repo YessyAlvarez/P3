@@ -1,6 +1,8 @@
 ﻿using System;
 using Dominio;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace InterfazWeb
 {
@@ -45,6 +47,15 @@ namespace InterfazWeb
             {
                 e.Authenticated = false;
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["conexionGestionTramites"].ConnectionString;
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            cn.Open();
+            Label1.Text = "Conectado";
+            cn.Close();
         }
     }
 }
