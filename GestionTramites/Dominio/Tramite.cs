@@ -19,7 +19,7 @@ namespace Dominio
         public string Descripcion { get; set; }
         public double Costo { get; set; }
         public int Tiempo { get; set; }  /*Tiempo previsto de ejecuciòn en días*/
-        //public List<Funcionario> grupoFuncionarios { get; set; }
+        public List<GrupoTramite> Grupos { get; set; }
         public List<Etapa> etapas { get; set; }
 
         #region VALIDACION

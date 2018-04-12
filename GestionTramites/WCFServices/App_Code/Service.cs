@@ -19,16 +19,18 @@ public class Service : IService
         return retorno;
     }
 
-    public bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<Object> gruposTramite)
+    public bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<GrupoTramite> gruposTramite)
     {
+        Tramite newTramite = new Tramite
+        {
+            Titulo = titulo,
+            Descripcion = desc,
+            Costo = costo,
+            Tiempo = tiempo,
+            Grupos = gruposTramite
+        };
 
-        /**
-         * 
-         * lógica
-         * 
-         **/
-
-        return true;
+        return newTramite.AgregarTramite();
     }
 
     bool IService.WCFGuardarTxt()

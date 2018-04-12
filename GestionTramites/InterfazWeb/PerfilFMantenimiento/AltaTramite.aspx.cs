@@ -22,7 +22,15 @@ namespace InterfazWeb.PerfilFMantenimiento
 
         protected void Button_NewTramite_Click(object sender, EventArgs e)
         {
-            //Hago los controles necesarios y llamo al dominio
+            //Hago los controles necesarios y llamo al WCF
+
+
+
+
+
+
+
+
             //Si todo OK
             //Muestro los paneles
             Panel_Paso1.Visible = false;

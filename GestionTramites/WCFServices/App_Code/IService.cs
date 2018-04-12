@@ -14,7 +14,7 @@ public interface IService
 
 
     [OperationContract]
-    bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<Object> gruposTramite);
+    bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<GrupoTramite> gruposTramite);
 
    
     [OperationContract]
