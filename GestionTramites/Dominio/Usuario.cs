@@ -1,4 +1,4 @@
-﻿using AccesosDB;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -7,34 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using AccesosDB;
 
 namespace Dominio
 {
     public class Usuario
     {
-        public string UsuarioLogin { set; get; }
+        public string Email { set; get; }
         public string Password { set; get; }
-        public EnumRol TipoPerfil { set; get; }
-        public string NombreApellido { set; get; }
+        public EnumPerfil TipoPerfil { set; get; }
+        public Grupo Rol { set; get; }
 
-
-        /*   public Usuario(string unNombreApellido, string nombreUsuario, string passw, EnumPerfil tipoPerfl)
-           {
-               this.NombreApellido = unNombreApellido;
-               this.UsuarioLogin = nombreUsuario;
-               this.Password = passw;
-               this.TipoPerfil = tipoPerfl;
-           }
-           */
 
 
         #region BUSCAR USUARIO
 
-        public static EnumRol ObtenerRol(string usuario, string password)
+        public static EnumPerfil ObtenerRol(string email, string password)
         {
-            EnumRol perfilUsuario = EnumRol.NoAutorizado;
+            EnumPerfil perfilUsuario = EnumPerfil.Anonimo;
 
-            string consulta = @"SELECT idRol FROM Usuario WHERE email='" + usuario + "' AND password='" + Usuario.MD5Hash(password) + "';";
+            string consulta = @"SELECT idRol FROM Usuario WHERE email='" + email + "' AND password='" + Usuario.MD5Hash(password) + "';";
             SqlConnection cn = Conexion.CrearConexion();
             SqlCommand cmd = new SqlCommand(consulta, cn);
             try
@@ -46,19 +38,15 @@ namespace Dominio
                     string perfil = dr["idRol"].ToString();
                     if (perfil.Equals("1"))
                     {
-                        perfilUsuario = EnumRol.Admin;
+                        perfilUsuario = EnumPerfil.Admin;
                     }
                     else if (perfil.Equals("2"))
                     {
-                        perfilUsuario = EnumRol.FuncionarioMantenimiento;
-                    }
-                    else if (perfil.Equals("3"))
-                    {
-                        perfilUsuario = EnumRol.FuncionarioEscribano;
+                        perfilUsuario = EnumPerfil.FuncionarioMantenimiento;
                     }
                     else
                     {
-                        perfilUsuario = EnumRol.NoAutorizado;
+                        perfilUsuario = EnumPerfil.Anonimo;
                     }
                 }
                 dr.Close();
@@ -75,7 +63,11 @@ namespace Dominio
             }
         }
 
+
         #endregion
+
+
+
         public static string MD5Hash(string input)
         {
             StringBuilder hash = new StringBuilder();

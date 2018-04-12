@@ -32,7 +32,8 @@ CREATE TABLE Usuario(
 	PRIMARY KEY(email)
 );
 GO
-INSERT INTO Usuario values('admin', '202cb962ac59075b964b07152d234b70', 'Admin ADMIN', 1, 1);
+INSERT INTO Usuario values('admin', '202cb962ac59075b964b07152d234b70', 'Admin ADMIN', 2, 1);
+INSERT INTO Usuario values('func', '202cb962ac59075b964b07152d234b70', 'Funcionario MANTENIMIENTO', 1, 1);
 /*INSERT INTO Usuario values('mant@mantenimiento.com', '202cb962ac59075b964b07152d234b70', 'Mant MANTENIMIENTO', 2, 1);*/
 GO
 

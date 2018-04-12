@@ -106,8 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bienvenidos\BienvenidoAdmin.aspx" />
-    <Content Include="Bienvenidos\BienvenidoOrganizador.aspx" />
-    <Content Include="Bienvenidos\BienvenidoProveedor.aspx" />
+    <Content Include="Bienvenidos\BienvenidoFMantenimiento.aspx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
@@ -173,19 +172,12 @@
     <Compile Include="Bienvenidos\BienvenidoAdmin.aspx.designer.cs">
       <DependentUpon>BienvenidoAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Bienvenidos\BienvenidoOrganizador.aspx.cs">
-      <DependentUpon>BienvenidoOrganizador.aspx</DependentUpon>
+    <Compile Include="Bienvenidos\BienvenidoFMantenimiento.aspx.cs">
+      <DependentUpon>BienvenidoFMantenimiento.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Bienvenidos\BienvenidoOrganizador.aspx.designer.cs">
-      <DependentUpon>BienvenidoOrganizador.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Bienvenidos\BienvenidoProveedor.aspx.cs">
-      <DependentUpon>BienvenidoProveedor.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Bienvenidos\BienvenidoProveedor.aspx.designer.cs">
-      <DependentUpon>BienvenidoProveedor.aspx</DependentUpon>
+    <Compile Include="Bienvenidos\BienvenidoFMantenimiento.aspx.designer.cs">
+      <DependentUpon>BienvenidoFMantenimiento.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

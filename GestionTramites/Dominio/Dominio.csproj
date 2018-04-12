@@ -42,21 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnumRol.cs" />
-    <Compile Include="Evento.cs" />
-    <Compile Include="EventoProveedor.cs" />
-    <Compile Include="Organizador.cs" />
+    <Compile Include="EnumPerfil.cs" />
+    <Compile Include="Etapa.cs" />
+    <Compile Include="Expediente.cs" />
+    <Compile Include="Grupo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proveedor.cs" />
     <Compile Include="GestionTramites.cs" />
     <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Servicio.cs" />
-    <Compile Include="ProveedorServicio.cs" />
-    <Compile Include="TipoEvento.cs" />
+    <Compile Include="Solicitante.cs" />
+    <Compile Include="Tramite.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -15,29 +15,6 @@ namespace InterfazWeb.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService")]
     public interface IService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/WCFAllServiciosWhitTipoEvento", ReplyAction="http://tempuri.org/IService/WCFAllServiciosWhitTipoEventoResponse")]
-        Dominio.Servicio[] WCFAllServiciosWhitTipoEvento();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/WCFAllServiciosWhitTipoEvento", ReplyAction="http://tempuri.org/IService/WCFAllServiciosWhitTipoEventoResponse")]
-        System.Threading.Tasks.Task<Dominio.Servicio[]> WCFAllServiciosWhitTipoEventoAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/WCFAddProveedor", ReplyAction="http://tempuri.org/IService/WCFAddProveedorResponse")]
-        bool WCFAddProveedor(string nombreCompletoProv, string nombreUsuario, string passw, string nombreFantasia, string email, string telefono, bool esVIP, double valorArancelVIP, Dominio.ProveedorServicio[] listaServicios);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/WCFAddProveedor", ReplyAction="http://tempuri.org/IService/WCFAddProveedorResponse")]
-        System.Threading.Tasks.Task<bool> WCFAddProveedorAsync(string nombreCompletoProv, string nombreUsuario, string passw, string nombreFantasia, string email, string telefono, bool esVIP, double valorArancelVIP, Dominio.ProveedorServicio[] listaServicios);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/WCFShowAllProveedores", ReplyAction="http://tempuri.org/IService/WCFShowAllProveedoresResponse")]
-        Dominio.Proveedor[] WCFShowAllProveedores();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/WCFShowAllProveedores", ReplyAction="http://tempuri.org/IService/WCFShowAllProveedoresResponse")]
-        System.Threading.Tasks.Task<Dominio.Proveedor[]> WCFShowAllProveedoresAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/WCFShowProveedorPorRUT", ReplyAction="http://tempuri.org/IService/WCFShowProveedorPorRUTResponse")]
-        Dominio.Proveedor WCFShowProveedorPorRUT(string nombreRUT);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/WCFShowProveedorPorRUT", ReplyAction="http://tempuri.org/IService/WCFShowProveedorPorRUTResponse")]
-        System.Threading.Tasks.Task<Dominio.Proveedor> WCFShowProveedorPorRUTAsync(string nombreRUT);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/WCFChangeDatosProveedor", ReplyAction="http://tempuri.org/IService/WCFChangeDatosProveedorResponse")]
         bool WCFChangeDatosProveedor(string idProveedor, System.DateTime fechaIngreso, bool esVIP, double valorArncelVIP);
@@ -97,37 +74,7 @@ namespace InterfazWeb.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public Dominio.Servicio[] WCFAllServiciosWhitTipoEvento() {
-            return base.Channel.WCFAllServiciosWhitTipoEvento();
-        }
         
-        public System.Threading.Tasks.Task<Dominio.Servicio[]> WCFAllServiciosWhitTipoEventoAsync() {
-            return base.Channel.WCFAllServiciosWhitTipoEventoAsync();
-        }
-        
-        public bool WCFAddProveedor(string nombreCompletoProv, string nombreUsuario, string passw, string nombreFantasia, string email, string telefono, bool esVIP, double valorArancelVIP, Dominio.ProveedorServicio[] listaServicios) {
-            return base.Channel.WCFAddProveedor(nombreCompletoProv, nombreUsuario, passw, nombreFantasia, email, telefono, esVIP, valorArancelVIP, listaServicios);
-        }
-        
-        public System.Threading.Tasks.Task<bool> WCFAddProveedorAsync(string nombreCompletoProv, string nombreUsuario, string passw, string nombreFantasia, string email, string telefono, bool esVIP, double valorArancelVIP, Dominio.ProveedorServicio[] listaServicios) {
-            return base.Channel.WCFAddProveedorAsync(nombreCompletoProv, nombreUsuario, passw, nombreFantasia, email, telefono, esVIP, valorArancelVIP, listaServicios);
-        }
-        
-        public Dominio.Proveedor[] WCFShowAllProveedores() {
-            return base.Channel.WCFShowAllProveedores();
-        }
-        
-        public System.Threading.Tasks.Task<Dominio.Proveedor[]> WCFShowAllProveedoresAsync() {
-            return base.Channel.WCFShowAllProveedoresAsync();
-        }
-        
-        public Dominio.Proveedor WCFShowProveedorPorRUT(string nombreRUT) {
-            return base.Channel.WCFShowProveedorPorRUT(nombreRUT);
-        }
-        
-        public System.Threading.Tasks.Task<Dominio.Proveedor> WCFShowProveedorPorRUTAsync(string nombreRUT) {
-            return base.Channel.WCFShowProveedorPorRUTAsync(nombreRUT);
-        }
         
         public bool WCFChangeDatosProveedor(string idProveedor, System.DateTime fechaIngreso, bool esVIP, double valorArncelVIP) {
             return base.Channel.WCFChangeDatosProveedor(idProveedor, fechaIngreso, esVIP, valorArncelVIP);

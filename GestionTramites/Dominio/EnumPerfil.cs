@@ -1,10 +1,10 @@
 ﻿namespace Dominio
 {
-    public enum EnumRol
+    public enum EnumPerfil
     {
+        NoAutorizado = 0,
         Admin = 1,
         FuncionarioMantenimiento = 2,
-        FuncionarioEscribano = 3,
-        NoAutorizado = 4
+        Anonimo = 3
     }
 }

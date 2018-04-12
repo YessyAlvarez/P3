@@ -18,8 +18,8 @@ namespace InterfazWeb
         {
             string usuario = LoginInicio.UserName;
             string password = LoginInicio.Password;
-            EnumRol perfilUsuario = prov.ValidarUsuario(usuario, password);
-            if (perfilUsuario != EnumRol.NoAutorizado)
+            EnumPerfil perfilUsuario = prov.ValidarUsuario(usuario, password);
+            if (perfilUsuario != EnumPerfil.NoAutorizado)
             {
                 //Asigno a la sesion el tipo
                 Session["perfilUsuario"] = perfilUsuario;
@@ -30,17 +30,17 @@ namespace InterfazWeb
                 //Autenticación exitosa
                 e.Authenticated = true;
                 //Re-dirijo a la home de cada perfil
-                if (perfilUsuario == EnumRol.Admin)
+                if (perfilUsuario == EnumPerfil.Admin)
                 {
                     Response.Redirect("Bienvenidos/BienvenidoAdmin.aspx");
                 }
-                else if (perfilUsuario == EnumRol.FuncionarioMantenimiento)
+                else if (perfilUsuario == EnumPerfil.FuncionarioMantenimiento)
                 {
-                    Response.Redirect("Bienvenidos/BienvenidoProveedor.aspx");
+                    Response.Redirect("Bienvenidos/BienvenidoFMantenimiento.aspx");
                 }
                 else
                 {
-                    Response.Redirect("Bienvenidos/BienvenidoOrganizador.aspx");
+                    //Response.Redirect("Bienvenidos/BienvenidoOrganizador.aspx");
                 }
             }
             else

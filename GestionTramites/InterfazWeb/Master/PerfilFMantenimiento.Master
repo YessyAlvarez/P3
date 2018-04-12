@@ -13,7 +13,7 @@
         <asp:Panel ID="PanelOnlyLoginTrue" runat="server">
             <header>
                 <div id="HeadAdmin">
-                    <img src="../theme/img/bg-funcionariommmmmmmmmm     vbgfbgbg .jpg" style="width:100%;"/>
+                    <img src="../theme/img/bg-funcionario.jpg" style="width:100%;"/>
                     <div class="isLoginTrue">
                         <span style="text-align: left;float:left;">
                             Bienvenido 
@@ -28,9 +28,6 @@
         </asp:Panel>
 
         <asp:Panel ID="PanelMenuLateral" runat="server" CssClass="PanelMenuLateral">
-            <p>
-                <asp:LinkButton ID="LinkButtonABMGrupos" runat="server" OnClick="LinkButtonABMGrupos_Click">ABM de Grupos</asp:LinkButton>
-            </p>
             <p>
                 <asp:LinkButton ID="LinkButton_ABMTramite" runat="server" OnClick="LinkButton_ABMTramite_Click">ABM de Trámite</asp:LinkButton>
             </p>

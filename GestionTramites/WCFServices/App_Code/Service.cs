@@ -19,7 +19,18 @@ public class Service : IService
         return retorno;
     }
 
-    
+    public bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<Object> gruposTramite)
+    {
+
+        /**
+         * 
+         * lógica
+         * 
+         **/
+
+        return true;
+    }
+
     bool IService.WCFGuardarTxt()
     {
         throw new NotImplementedException();
