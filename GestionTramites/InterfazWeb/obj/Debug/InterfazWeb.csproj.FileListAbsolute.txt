@@ -158,8 +158,8 @@ C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTrami
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.csprojResolveAssemblyReference.cache
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.dll
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\Tramites\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.pdb
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.dll
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.pdb
+C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.csprojResolveAssemblyReference.cache
+C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.csproj.CoreCompileInputs.cache
 C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\bin\roslyn\csc.exe
 C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -198,6 +198,6 @@ C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\bin\
 C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\bin\System.Diagnostics.DiagnosticSource.xml
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.csprojResolveAssemblyReference.cache
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.csproj.CoreCompileInputs.cache
 C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.csproj.CopyComplete
+C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.dll
+C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\InterfazWeb\obj\Debug\InterfazWeb.pdb
