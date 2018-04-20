@@ -59,6 +59,8 @@
     <br />
     <br />
     <br />
+    <asp:Label ID="Label_Msj_SinGrupos" runat="server"></asp:Label>
+    <br />
     <asp:ListBox ID="ListBox_GruposAgregados" runat="server"></asp:ListBox>
     <br />
     <br />

@@ -119,11 +119,11 @@ namespace Dominio
 
             if (fila != null)
             {
-                grupo = new Grupo
+                //grupo = new Grupo
                 {
 
-                    Nombre = fila.IsDBNull(fila.GetOrdinal("Nombre")) ? "" : fila.GetString(fila.GetOrdinal("Nombre"))
-                };
+                    //Nombre = fila.IsDBNull(fila.GetOrdinal("Nombre")) ? "" : fila.GetString(fila.GetOrdinal("Nombre"))
+                }
             }
             return grupo;
         }

@@ -19,10 +19,12 @@ namespace InterfazWeb.PerfilFMantenimiento
         {
             if (!IsPostBack)
             {
-                //Muestro los paneles
+                //Muestro los paneles y mensajes
                 Panel_Paso1.Visible = true;
                 Panel_Paso2.Visible = false;
                 Panel_Msj.Visible = false;
+                Label_Msj_SinGrupos.Text = "No hay gros agregados al trámite";
+
 
                 //Cargo el combo de Grupos
                 DropDownList_Grupos.Items.Clear();
@@ -146,15 +148,15 @@ namespace InterfazWeb.PerfilFMantenimiento
 
         protected void Button_AgregarGrupo_Click(object sender, EventArgs e)
         {
+            //Obtengo los datos ingresados
+            string desc = TextBox_DescripcionGrupo.Text;
+            int cantMaxFunc = Convert.ToInt32(TextBox_MaxFunc.Text);
             //Obtengo el id del grupo Seleccionado y obtengo el grupo
             int idSeleccionado = Convert.ToInt32(DropDownList_Grupos.SelectedValue);
             Dominio.Grupo grupo = a.WCFObtenerGrupoPorId(idSeleccionado);
-            //Creo el objeto a agregar al listado
-
-
-
-            GrupoTramite gt = new GrupoTramite();
-
+            //Creo el objeto a agregar al listado y lo cargo con los datos
+            Dominio.ServiceReference_1.GrupoTramite gt = new Dominio.ServiceReference_1.GrupoTramite(desc, cantMaxFunc, grupo);
+            
 
 
 
@@ -165,11 +167,11 @@ namespace InterfazWeb.PerfilFMantenimiento
             ListBox_GruposAgregados.Text = DropDownList_Grupos.SelectedItem.ToString();
             if (Servicio.FindTipoEventoFroServicio(idSeleccionado).Count > 0)
             {
-                ListBoxServicios.Visible = true;
-                ListBoxServicios.Items.Clear();
-                ListBoxServicios.DataSource = Servicio.FindTipoEventoFroServicio(idSeleccionado);
-                ListBoxServicios.DataBind();
-                LabelVacioTipoEvento.Text = "";
+                ListBox_GruposAgregados.Visible = true;
+                ListBox_GruposAgregados.Items.Clear();
+                ListBox_GruposAgregados.DataSource = Servicio.FindTipoEventoFroServicio(idSeleccionado);
+                ListBox_GruposAgregados.DataBind();
+                Label_Msj_SinGrupos.Text = "";
             }
         }
     }

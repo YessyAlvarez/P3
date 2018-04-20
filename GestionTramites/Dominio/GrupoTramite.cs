@@ -10,6 +10,8 @@ using System.Security.Cryptography;
 using System.Data;
 using AccesosDB;
 
+
+
 namespace Dominio
 {
     public class GrupoTramite

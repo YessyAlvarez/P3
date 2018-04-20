@@ -157,6 +157,15 @@ namespace InterfazWeb.PerfilFMantenimiento {
         protected global::System.Web.UI.WebControls.Button Button_AgregarGrupo;
         
         /// <summary>
+        /// Control Label_Msj_SinGrupos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Msj_SinGrupos;
+        
+        /// <summary>
         /// Control ListBox_GruposAgregados.
         /// </summary>
         /// <remarks>
