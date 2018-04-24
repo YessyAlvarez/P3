@@ -111,14 +111,48 @@ namespace Dominio
             }
         }
 
+        public static List<Grupo> MiListarTodosLosGrupos()
+        {
+            List<Grupo> grupos = new List<Grupo>();
 
+            string consulta = @"SELECT * FROM Grupo";
+            SqlConnection cn = Conexion.CrearConexion();
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+
+
+            try
+            {
+                Conexion.AbrirConexion(cn);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Grupo grup = cargarDatosDesdeReader(dr);
+                    grupos.Add(grup);
+                }
+                dr.Close();
+                return grupos;
+            }
+            catch ( Exception ex)
+            {
+                Debug.Assert(false, ex.Message);
+                return null;
+            }
+            finally
+            {
+                Conexion.CerrarConexion(cn);
+            }
+        }
+            
+ 
         public static Grupo ObtenerGrupoPorId(int idGrupo) {
             Grupo grupo = new Grupo();
             
             string consulta = @"SELECT * FROM Grupo WHERE idGrupo=" + idGrupo;
 
             SqlConnection cn = Conexion.CrearConexion();
-            List<Grupo> grupos = new List<Grupo>();
+            //List<Grupo> grupos = new List<Grupo>();
 
             SqlCommand cmd = new SqlCommand(consulta, cn);
 
@@ -130,11 +164,6 @@ namespace Dominio
                 while (dr.Read())
                 {
                     Grupo grup = cargarDatosDesdeReader(dr);
-
-                    if (grup.Codigo != 0)
-                    {
-                        grupos.Add(grup);
-                    }
                 }
                 dr.Close();
                 return grupo;

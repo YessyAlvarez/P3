@@ -1,22 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using Dominio;
-using Dominio.ServiceReference_1;
-
 
 namespace InterfazWeb.PerfilFMantenimiento
 {
     public partial class AltaTramite : System.Web.UI.Page
     {
 
-        ServiceClient a = new ServiceClient();
+        //ServiceClient a = new ServiceClient();
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
+         
             if (!IsPostBack)
             {
                 //Muestro los paneles y mensajes
@@ -27,9 +23,9 @@ namespace InterfazWeb.PerfilFMantenimiento
 
 
                 //Cargo el combo de Grupos
-                DropDownList_Grupos.Items.Clear();
+               /* DropDownList_Grupos.Items.Clear();
                 DropDownList_Grupos.DataSource = a.WCFGetGrupo();
-                DropDownList_Grupos.DataBind();
+                DropDownList_Grupos.DataBind();*/
             }
         }
 
@@ -41,7 +37,7 @@ namespace InterfazWeb.PerfilFMantenimiento
             if (tituloTramite.Length == 0)
             {
                 Label_Titulo_Error.Text = "El nombre del tramite no puede ser vacio";
-            }
+            }/*
             else if (a.WCFExisteNombreTramite(tituloTramite))
             {
                 Label_Titulo_Error.Text = "El nombre del tramite ya existe. Ingrese uno nuevo.";
@@ -50,7 +46,7 @@ namespace InterfazWeb.PerfilFMantenimiento
             //
             //
             //
-            //
+            //*/
 
             return ok;
         }
@@ -69,7 +65,7 @@ namespace InterfazWeb.PerfilFMantenimiento
                 //List<GrupoTramite> grupo_tramites = null;
 
 
-                if (a.WCFAddTramite(titulo, desc, costo, tiempo, null))
+             /*   if (a.WCFAddTramite(titulo, desc, costo, tiempo, null))
                 {
                     //Si todo OK
 
@@ -91,7 +87,7 @@ namespace InterfazWeb.PerfilFMantenimiento
                     Label_Msj.Text = "NO SE PUDO CARGAR EL TRAMITE. INTENTE NUEVAMENTE.";
                 }
 
-
+    */
 
 
             }
@@ -148,21 +144,21 @@ namespace InterfazWeb.PerfilFMantenimiento
 
         protected void Button_AgregarGrupo_Click(object sender, EventArgs e)
         {
-            //Obtengo los datos ingresados
+           /* //Obtengo los datos ingresados
             string desc = TextBox_DescripcionGrupo.Text;
             int cantMaxFunc = Convert.ToInt32(TextBox_MaxFunc.Text);
             //Obtengo el id del grupo Seleccionado y obtengo el grupo
             int idSeleccionado = Convert.ToInt32(DropDownList_Grupos.SelectedValue);
             Dominio.Grupo grupo = a.WCFObtenerGrupoPorId(idSeleccionado);
             //Creo el objeto a agregar al listado y lo cargo con los datos
-            Dominio.ServiceReference_1.GrupoTramite gt = new Dominio.ServiceReference_1.GrupoTramite(desc, cantMaxFunc, grupo);
+            GrupoTramite gt = new GrupoTramite(desc, cantMaxFunc, grupo);
             
-
+            */
 
 
 
             //Agrego el grupo seleccionado a la lista
-            
+            /*
             //Cargo los datos a mostrar
             ListBox_GruposAgregados.Text = DropDownList_Grupos.SelectedItem.ToString();
             if (Servicio.FindTipoEventoFroServicio(idSeleccionado).Count > 0)
@@ -173,6 +169,7 @@ namespace InterfazWeb.PerfilFMantenimiento
                 ListBox_GruposAgregados.DataBind();
                 Label_Msj_SinGrupos.Text = "";
             }
+            */
         }
     }
 }

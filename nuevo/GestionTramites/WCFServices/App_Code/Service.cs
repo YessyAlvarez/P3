@@ -1,7 +1,7 @@
 ﻿using System;
-using Dominio;
 using System.Collections.Generic;
 using System.IO;
+using Dominio;
 
 // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de clase "Service1" en el código, en svc y en el archivo de configuración.
 public class Service : IService
@@ -19,7 +19,7 @@ public class Service : IService
         return retorno;
     }
 
-    public bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<GrupoTramite> gruposTramite)
+    public bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<DTOGrupoTramite> gruposTramite)
     {
         Tramite newTramite = new Tramite
         {
@@ -27,7 +27,7 @@ public class Service : IService
             Descripcion = desc,
             Costo = costo,
             Tiempo = tiempo,
-            Grupos = gruposTramite
+            //Grupos = gruposTramite
         };
 
         return newTramite.AgregarTramite();
@@ -44,14 +44,18 @@ public class Service : IService
         return Tramite.ExisteNombreTramite(nombreTramite);
     }
 
-    public List<Grupo> WCFGetGrupo()
+    public List<DTOGrupo> WCFGetGrupo()
     {
-        return Grupo.listarTodosLosGrupos();
+        return null;// Grupo.listarTodosLosGrupos();
     }
 
 
-    public Grupo WCFObtenerGrupoPorId(int idGrupo) {
-        return Grupo.ObtenerGrupoPorId(idGrupo);
+    public DTOGrupo WCFObtenerGrupoPorId(int idGrupo) {
+        return null; // Grupo.ObtenerGrupoPorId(idGrupo);
     }
 
+    public List<DTOGrupo> WCFListarGrupos()
+    {
+        return null; // Grupo.MiListarTodosLosGrupos();
+    }
 }

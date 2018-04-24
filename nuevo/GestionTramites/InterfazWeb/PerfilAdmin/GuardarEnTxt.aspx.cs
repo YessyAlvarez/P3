@@ -4,13 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Dominio.ServiceReference_1;
 
 namespace InterfazWeb.PerfilAdmin
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        ServiceClient miServicio = new ServiceClient();
+        //ServiceClient miServicio = new ServiceClient();
         protected void Page_Load(object sender, EventArgs e)
         {
          
@@ -18,7 +17,7 @@ namespace InterfazWeb.PerfilAdmin
 
         protected void ButtonProv_Click(object sender, EventArgs e)
         { 
-            miServicio.WCFGuardarTxt();
+            //miServicio.WCFGuardarTxt();
         }
 
         protected void ButtonEven_Click(object sender, EventArgs e)

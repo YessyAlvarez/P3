@@ -42,6 +42,9 @@
             <p>
                 <asp:LinkButton ID="LinkButtonGrabarArchivo" runat="server" OnClick="LinkButtonGrabarArchivo_Click" >Grabar Archivos texto</asp:LinkButton>
             </p>
+            <p>
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton_ListarGrupos_Click">Listar todos los grupos</asp:LinkButton>
+            </p>
         </asp:Panel>
 
         <div class="body">

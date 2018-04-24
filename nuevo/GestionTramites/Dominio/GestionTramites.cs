@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dominio.ServiceReference;
 using AccesosDB;
 
 namespace Dominio
@@ -29,7 +28,7 @@ namespace Dominio
 
         #region USUARIO
 
-        public void AddUsuario(string usuario, string NombreCompleto, EnumRol rol)
+        public void AddUsuario(string usuario, string NombreCompleto, EnumPerfil rol)
         {
             /* Usuario user = new Usuario(usuario, NombreCompleto, rol);
              ListaUsuarios.Add(user);

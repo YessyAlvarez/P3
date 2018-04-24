@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-using Dominio;
 
 // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
 [ServiceContract]
@@ -14,7 +13,7 @@ public interface IService
 
 
     [OperationContract]
-    bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<GrupoTramite> gruposTramite);
+    bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<DTOGrupoTramite> gruposTramite);
 
    
     [OperationContract]
@@ -26,11 +25,13 @@ public interface IService
 
 
     [OperationContract]
-    List<Grupo> WCFGetGrupo();
-
+    List<DTOGrupo> WCFGetGrupo();
 
     [OperationContract]
-    Grupo WCFObtenerGrupoPorId(int idGrupo);
+    List<DTOGrupo> WCFListarGrupos();
+
+    [OperationContract]
+    DTOGrupo WCFObtenerGrupoPorId(int idGrupo);
 
 
 
@@ -39,7 +40,29 @@ public interface IService
 
 // Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.
 [DataContract]
-public class CompositeType
+public class DTOGrupo
+{
+    bool boolValue = true;
+    string stringValue = "Hello ";
+
+    [DataMember]
+    public bool BoolValue
+    {
+        get { return boolValue; }
+        set { boolValue = value; }
+    }
+
+    [DataMember]
+    public string StringValue
+    {
+        get { return stringValue; }
+        set { stringValue = value; }
+    }
+}
+
+
+[DataContract]
+public class DTOGrupoTramite
 {
     bool boolValue = true;
     string stringValue = "Hello ";
