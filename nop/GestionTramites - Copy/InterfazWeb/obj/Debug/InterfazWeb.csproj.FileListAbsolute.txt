@@ -1,2 +1,0 @@
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites - Copy\InterfazWeb\obj\Debug\InterfazWeb.csprojResolveAssemblyReference.cache
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites - Copy\InterfazWeb\obj\Debug\InterfazWeb.csproj.CoreCompileInputs.cache

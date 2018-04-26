@@ -1,6 +1,0 @@
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites - Copy\AccesosDB\bin\Debug\AccesosDB.dll
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites - Copy\AccesosDB\bin\Debug\AccesosDB.pdb
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites - Copy\AccesosDB\obj\Debug\AccesosDB.csprojResolveAssemblyReference.cache
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites - Copy\AccesosDB\obj\Debug\AccesosDB.csproj.CoreCompileInputs.cache
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites - Copy\AccesosDB\obj\Debug\AccesosDB.dll
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites - Copy\AccesosDB\obj\Debug\AccesosDB.pdb
