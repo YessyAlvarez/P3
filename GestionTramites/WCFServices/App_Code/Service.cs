@@ -14,8 +14,14 @@ public class Service : IService
         return grupo.AgregarGrupo();
     }
 
-    public bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<DTOGrupoTramite> gruposTramite)
+    public bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<int> gruposTramite)
     {
+        //Obtengo todos los id de los grupos y los convierto a DTOGrupoTramite
+        /*
+         * Código
+         * 
+         * */
+
         Tramite newTramite = new Tramite
         {
             Titulo = titulo,
@@ -87,8 +93,7 @@ public class Service : IService
     public string WCFGetNombreCompleto(string emailUsuario) {
         return Usuario.ObtenerNombreCompleto(emailUsuario);
     }
-
-
+    
 
     public List<DTOGrupo> WCFListarGruposVacios() {
         List<DTOGrupo> retorno = new List<DTOGrupo>();

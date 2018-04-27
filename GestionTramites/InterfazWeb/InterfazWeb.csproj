@@ -107,6 +107,16 @@
   <ItemGroup>
     <Content Include="Bienvenidos\BienvenidoAdmin.aspx" />
     <Content Include="Bienvenidos\BienvenidoFMantenimiento.aspx" />
+    <Content Include="Connected Services\ServiceReference\InterfazWeb.ServiceReference.DTOGrupo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ServiceReference\Service.disco" />
+    <None Include="Connected Services\ServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="PerfilAdmin\ListadoGrupos.aspx" />
     <Content Include="packages.config">
       <SubType>Designer</SubType>
@@ -129,6 +139,19 @@
     <Content Include="Properties\DataSources\Dominio.Proveedor.datasource" />
     <Content Include="Properties\DataSources\Dominio.Servicio.datasource" />
     <Content Include="Master\PerfilFMantenimiento.Master" />
+    <None Include="Connected Services\ServiceReference\Service.wsdl" />
+    <None Include="Connected Services\ServiceReference\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -162,6 +185,11 @@
     </Compile>
     <Compile Include="Bienvenidos\BienvenidoFMantenimiento.aspx.designer.cs">
       <DependentUpon>BienvenidoFMantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -200,7 +228,7 @@
     </Compile>
     <Compile Include="PerfilAdmin\ListadoGrupos.aspx.designer.cs">
       <DependentUpon>ListadoGrupos.aspx</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="PerfilAdmin\ABMFuncionarios.aspx.cs">
       <DependentUpon>ABMFuncionarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -310,11 +338,12 @@
       <Name>Dominio</Name>
     </ProjectReference>
   </ItemGroup>
-
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

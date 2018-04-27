@@ -33,3 +33,8 @@ C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\AccesosD
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\AccesosDB\obj\Debug\AccesosDB.csprojResolveAssemblyReference.cache
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\AccesosDB\obj\Debug\AccesosDB.dll
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\AccesosDB\obj\Debug\AccesosDB.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\AccesosDB\bin\Debug\AccesosDB.dll
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\AccesosDB\bin\Debug\AccesosDB.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.csprojResolveAssemblyReference.cache
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.dll
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.pdb

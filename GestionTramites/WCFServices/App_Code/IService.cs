@@ -12,7 +12,7 @@ public interface IService
     bool WCFAddGrupo(string nombreGrupo);
     
     [OperationContract]
-    bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<DTOGrupoTramite> gruposTramite);
+    bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<int> gruposTramite);
 
 	
     [OperationContract]

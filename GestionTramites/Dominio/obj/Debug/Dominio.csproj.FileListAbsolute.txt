@@ -63,3 +63,11 @@ C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\Dominio\
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\Dominio\obj\Debug\Dominio.dll
 C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\Dominio\bin\Debug\Dominio.dll.config
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\Dominio\bin\Debug\Dominio.dll
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\Dominio\bin\Debug\AccesosDB.dll
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\Dominio\bin\Debug\AccesosDB.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\Dominio\obj\Debug\Dominio.dll
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\Dominio\obj\Debug\Dominio.pdb
