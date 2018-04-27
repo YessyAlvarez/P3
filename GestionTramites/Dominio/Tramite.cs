@@ -35,52 +35,80 @@ namespace Dominio
         public bool AgregarTramite()
         {
             SqlConnection cn = Conexion.CrearConexion();
-
             SqlCommand cmd = new SqlCommand();
             SqlTransaction trn = null;
-            cmd.CommandText = @"INSERT INTO Tramite VALUES(@titulo,@desc,@costo,@tiempo);";
-            cmd.Parameters.AddWithValue("@titulo", this.Titulo);
-            cmd.Parameters.AddWithValue("@desc", this.Descripcion);
-            cmd.Parameters.AddWithValue("@costo", this.Costo);
-            cmd.Parameters.AddWithValue("@tiempo", this.Tiempo);
             cmd.Connection = cn;
 
             try
             {
+                if (!this.Validar()) return false;
                 Conexion.AbrirConexion(cn);
                 trn = cn.BeginTransaction();
                 cmd.Transaction = trn;
                 cmd.ExecuteNonQuery();
-                //int ultimoId = (int)cmd.ExecuteScalar();
+                cmd.Parameters.Clear();
 
+                //procedimiento para verificar si ya existe el titulo
+                cmd.CommandText = @"CREATE PROCEDURE verificarTitulo (@titulo) AS IF EXIST (SELECT titulo FROM Tramite WHERE titulo = @titulo) BEGIN PRINT 'Ya existe este titulo' END ELSE INSERT INTO Tramite VALUES (@id, @titulo, @descripcion, @costo, @tiempo);";
+                cmd.Parameters.AddWithValue("@titulo", Titulo);
+                cmd.Parameters.Add(new SqlParameter("@id", Id));
+                cmd.Parameters.Add(new SqlParameter("@titulo", Titulo));
+                cmd.Parameters.Add(new SqlParameter("@descripcion", Descripcion));
+                cmd.Parameters.Add(new SqlParameter("@costo", Costo));
+                cmd.Parameters.Add(new SqlParameter("@tiempo", Tiempo));
+
+                cmd.ExecuteNonQuery();
                 int filasAfectadas = 0;
-                for (int i = 0; i < this.Grupos.Count; i++)
+
+                for (int i = 0; i < this.etapas.Count; i++)
                 {
-                    GrupoTramite gt = Grupos[i];
-                    cmd.Parameters.Clear();
-                    cmd.CommandText = @"INSERT INTO GrupoTramite VALUES(,@desc,@cantMaxFun)";
+                    Etapa eta = etapas[i];
 
-                    cmd.Parameters.Add(new SqlParameter("@desc", gt.Descripcion));
-                    cmd.Parameters.Add(new SqlParameter("@cantMaxFun", gt.CantidadMaxFuncionarios));
-                    filasAfectadas += cmd.ExecuteNonQuery();
-
-                    cmd.ExecuteNonQuery();
-
-                    if (filasAfectadas == this.Grupos.Count)
+                    if (eta != null)
                     {
-                        trn.Commit();
-                        return true;
-                    }
-                    else
-                    {
-                        trn.Rollback();
-                        return false;
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = @"INSERT INTO Etapa VALUES (@codigo, @descripcion, @lapsoMax, @activa);";
+
+                        cmd.Parameters.Add(new SqlParameter("@codigo", eta.Codigo));
+                        cmd.Parameters.Add(new SqlParameter("@descripcion", eta.Descripcion));
+                        cmd.Parameters.Add(new SqlParameter("@lapsoMax", eta.LapsoMax));
+                        cmd.Parameters.Add(new SqlParameter("@activa", 1));
+
+                        filasAfectadas += cmd.ExecuteNonQuery();
                     }
                 }
+                cmd.ExecuteNonQuery();
+                //int filasAfectadas2 = 0;
+                //for(int j= 0; j < this.grupoFuncionarios.Count; j++)
+                //{
+                //    Funcionario fno = grupoFuncionarios[j];
+
+                //    if(fno!= null)
+                //    {
+                //        cmd.Parameters.Clear();
+                //        cmd.CommandText = @"INSERT INTO Funcionario VALUES(@nombre,@disponible)";
+                //        cmd.Parameters.Add(new SqlParameter("@nombre", fno.Nombre));
+                //        cmd.Parameters.Add(new SqlParameter("@disponible", 1));
+
+                //        filasAfectadas2 += cmd.ExecuteNonQuery();
+                //    }
+                //}
+                if (filasAfectadas == this.etapas.Count)
+                {
+                    trn.Commit();
+                    trn.Dispose();
+                    return true;
+                }
+                else
+                {
+                    trn.Rollback();
+                    return false;
+                }
+
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
-                System.Diagnostics.Debug.Assert(false, ex.Message);
+                Debug.Assert(false, ex.Message);
                 trn.Rollback();
                 return false;
             }
@@ -88,7 +116,6 @@ namespace Dominio
             {
                 Conexion.CerrarConexion(cn);
             }
-            return false;
         }
 
         #endregion
@@ -139,6 +166,7 @@ namespace Dominio
         }
 
 
+
         public static bool ExisteNombreTramite(string nombreTramite)
         {
             bool existe = false;
@@ -176,8 +204,6 @@ namespace Dominio
                 Conexion.CerrarConexion(cn);
             }
         }
-
-
 
 
         #endregion

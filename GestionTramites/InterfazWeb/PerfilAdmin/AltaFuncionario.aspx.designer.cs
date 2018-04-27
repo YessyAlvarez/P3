@@ -10,7 +10,7 @@
 namespace InterfazWeb.PerfilAdmin {
     
     
-    public partial class AltaFuncionario {
+    public partial class AltaProveedor {
         
         /// <summary>
         /// Control PanelStep1.

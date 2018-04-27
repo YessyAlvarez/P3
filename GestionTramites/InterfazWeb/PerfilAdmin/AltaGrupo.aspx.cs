@@ -4,16 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Dominio;
-using Dominio.ServiceReference222;
 
 namespace InterfazWeb.PerfilAdmin
 {
     public partial class AltaGrupo : System.Web.UI.Page
     {
-        ServiceClient a = new ServiceClient();
-
-       
+        //ServiceClient servicio = new ServiceClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,11 +28,10 @@ namespace InterfazWeb.PerfilAdmin
             string nombreGrupo = TextBox_NombreGrupo.Text;
             if(nombreGrupo.Length>0 && nombreGrupo != null)
             {
-                if (a.WCFAddGrupo(nombreGrupo))
+                bool addExitoso = false; //servicio.WCFAddGrupo(nombreGrupo);
+
+                if (addExitoso)
                 {
-                    /*
-                >> muestro mensaje y limpio formulario
-                */
                     //Despliego los paneles
                     PanelAdd.Visible = false;
                     PanelMsj.Visible = true;
@@ -46,14 +41,11 @@ namespace InterfazWeb.PerfilAdmin
                 }
                 else
                 {
-                    /*
-                >> muestro mensaje y limpio formulario
-                */
                     //Despliego los paneles
                     PanelAdd.Visible = false;
                     PanelMsj.Visible = true;
 
-                    LabelMensaje.Text = "Error al crear el formulario. Vuelva a intentarlo.";
+                    LabelMensaje.Text = "Nombre incorrecto! Intente con otro nombre.";
                     ButtonNewGrupo.Visible = true;
                 }
             }
@@ -61,7 +53,7 @@ namespace InterfazWeb.PerfilAdmin
             {
                 //Muestro error!!!
                 Label_MsjError.Visible = true;
-                Label_MsjError.Text = "Ingrese un nombre correcto!";
+                Label_MsjError.Text = "El nombre del grupo no puede ser vacio!";
 
             }
         }

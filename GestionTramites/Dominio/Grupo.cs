@@ -17,15 +17,16 @@ namespace Dominio
         public int Codigo { get; set; }
         public string Nombre { get; set; }
 
-
-
+        
         #region CONTRUCTOR
 
-        public Grupo(string nombreGrupo)
+        public Grupo()
         {
-            this.Nombre = nombreGrupo;
+            this.Nombre = "";
         }
+
         #endregion
+
 
         #region VALIDACION
         bool Validar()
@@ -42,18 +43,19 @@ namespace Dominio
             SqlCommand cmd = new SqlCommand();
             SqlTransaction trn = null;
             cmd.Connection = cn;
-
             try
             {
                 if (!this.Validar()) return false;
                 Conexion.AbrirConexion(cn);
                 trn = cn.BeginTransaction();
                 cmd.Transaction = trn;
-                cmd.ExecuteNonQuery();
+                
                 cmd.Parameters.Clear();
-                cmd.CommandText = @"INSERT TO INTO Grupo VALUES (@nombre);";
+                cmd.CommandText = @"INSERT INTO Grupo VALUES (@nombre);";
 
                 cmd.Parameters.Add(new SqlParameter("@nombre", Nombre));
+
+                cmd.ExecuteNonQuery();
 
                 trn.Commit();
                 trn.Dispose();
@@ -71,9 +73,92 @@ namespace Dominio
             }
 
         }
+        
+
+
+        public bool ModificarGrupo()
+        {
+            SqlConnection cn = Conexion.CrearConexion();
+
+            SqlCommand cmd = new SqlCommand();
+            SqlTransaction trn = null;
+            cmd.Connection = cn;
+            try
+            {
+                if (!this.Validar()) return false;
+                Conexion.AbrirConexion(cn);
+                trn = cn.BeginTransaction();
+                cmd.Transaction = trn;
+
+                cmd.Parameters.Clear();
+                cmd.CommandText = @"UPDATE Grupo SET nombreGrupo = @nombre WHERE idGrupo = @idgrupo;";
+
+                cmd.Parameters.Add(new SqlParameter("@idgrupo", this.Codigo));
+                cmd.Parameters.Add(new SqlParameter("@nombre", this.Nombre));
+
+                cmd.ExecuteNonQuery();
+
+                trn.Commit();
+                trn.Dispose();
+                return true;
+            }
+            catch (SqlException ex)
+            {
+                Debug.Assert(false, ex.Message);
+                trn.Rollback();
+                return false;
+            }
+            finally
+            {
+                Conexion.CerrarConexion(cn);
+            }
+
+        }
+
+
+
+
         #endregion
 
         #region METODO
+
+        public static List<Grupo> listarTodosLosGruposVacios() {
+            string consulta = @"SELECT * FROM Grupo WHERE idGrupo NOT IN (SELECT idGrupo FROM GrupoTramite GROUP BY idGrupo);";
+
+            SqlConnection cn = Conexion.CrearConexion();
+            List<Grupo> grupos = new List<Grupo>();
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+
+            try
+            {
+                Conexion.AbrirConexion(cn);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Grupo grup = cargarDatosDesdeReader(dr);
+
+                    if (grup.Codigo != 0)
+                    {
+                        grupos.Add(grup);
+                    }
+                }
+                dr.Close();
+                return grupos;
+            }
+            catch (Exception ex)
+            {
+                Debug.Assert(false, ex.Message);
+                return null;
+            }
+            finally
+            {
+                Conexion.CerrarConexion(cn);
+            }
+        }
+
+
         public static List<Grupo> listarTodosLosGrupos()
         {
             string consulta = @"SELECT * FROM Grupo";
@@ -111,7 +196,73 @@ namespace Dominio
             }
         }
 
+        public static List<Grupo> MiListarTodosLosGrupos()
+        {
+            List<Grupo> grupos = new List<Grupo>();
 
+
+            string consulta = @"SELECT nombreGrupo FROM Grupo";
+            SqlConnection cn = Conexion.CrearConexion();
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+
+            try
+            {
+                Conexion.AbrirConexion(cn);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Grupo grup = cargarDatosDesdeReader(dr);
+                    grupos.Add(grup);
+                }
+                dr.Close();
+                return grupos;
+            }
+            catch ( Exception ex)
+            {
+                Debug.Assert(false, ex.Message);
+                return null;
+            }
+            finally
+            {
+                Conexion.CerrarConexion(cn);
+            }
+        }
+            
+ 
+        public static Grupo ObtenerGrupoPorId(int idGrupo) {
+            Grupo grupo = new Grupo();
+            
+            string consulta = @"SELECT * FROM Grupo WHERE idGrupo=" + idGrupo;
+
+            SqlConnection cn = Conexion.CrearConexion();
+            //List<Grupo> grupos = new List<Grupo>();
+
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+
+            try
+            {
+                Conexion.AbrirConexion(cn);
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Grupo grup = cargarDatosDesdeReader(dr);
+                }
+                dr.Close();
+                return grupo;
+            }
+            catch (Exception ex)
+            {
+                Debug.Assert(false, ex.Message);
+                return null;
+            }
+            finally
+            {
+                Conexion.CerrarConexion(cn);
+            }
+        }
 
         protected static Grupo cargarDatosDesdeReader(IDataRecord fila)
         {
@@ -119,11 +270,11 @@ namespace Dominio
 
             if (fila != null)
             {
-                //grupo = new Grupo
+                grupo = new Grupo
                 {
-
-                    //Nombre = fila.IsDBNull(fila.GetOrdinal("Nombre")) ? "" : fila.GetString(fila.GetOrdinal("Nombre"))
-                }
+                    Codigo = fila.GetInt32(fila.GetOrdinal("idGrupo")),
+                    Nombre = fila.IsDBNull(fila.GetOrdinal("nombreGrupo")) ? "" : fila.GetString(fila.GetOrdinal("nombreGrupo"))
+                };
             }
             return grupo;
         }

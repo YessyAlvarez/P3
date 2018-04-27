@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dominio.ServiceReference;
 using AccesosDB;
 
 namespace Dominio
@@ -13,6 +12,8 @@ namespace Dominio
     {
 
              
+
+        
 
         #region GRUPOS
 
@@ -35,12 +36,12 @@ namespace Dominio
              ListaUsuarios.Add(user);
              Serializar();*/
         }
-
+/*
         public EnumPerfil ValidarUsuario(string usuario, string password)
         {
             return Usuario.ObtenerRol(usuario, password); ;
         }
-
+        */
 
         public string GetNombreCompleto(string usuarioIngresado)
         {

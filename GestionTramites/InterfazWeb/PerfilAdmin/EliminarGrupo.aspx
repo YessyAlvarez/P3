@@ -10,11 +10,7 @@
     <asp:Panel ID="PanelBuscarGrupo" runat="server">
         <br />
         Seleccione un grupo para eliminar:<br />
-        <asp:DropDownList ID="DropDownListGruposAEliminar" runat="server">
-            <asp:ListItem Selected="True">Grupo 1</asp:ListItem>
-            <asp:ListItem>Grupo 2</asp:ListItem>
-            <asp:ListItem>Grupo 3</asp:ListItem>
-            <asp:ListItem>Grupo 4</asp:ListItem>
+        <asp:DropDownList ID="DropDownListGruposAEliminar" runat="server" DataTextField="Nombre" DataValueField="Codigo">
         </asp:DropDownList>
         <br />
         <br />
@@ -27,12 +23,15 @@
     </p>
     <asp:Panel ID="PanelDatosGrupo" runat="server">
         <br />
+        Id:
+        <asp:Label ID="Label_Id" runat="server"></asp:Label>
+        <br />
         Nombre Grupo:
         <asp:Label ID="LabelNombre" runat="server" Text="Label"></asp:Label>
         <br />
         <br />
         <br />
-        ¿Seguro decea eliminar este proveedor?<br />
+        ¿Seguro desea eliminar este grupo?<br />
         <br />
         <asp:Button ID="ButtonEliminar" runat="server" Text="Eliminar" OnClick="ButtonEliminarProveedor_Click" />
         <br />

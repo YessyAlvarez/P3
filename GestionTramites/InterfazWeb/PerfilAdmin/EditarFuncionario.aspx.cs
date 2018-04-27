@@ -9,6 +9,7 @@ namespace InterfazWeb.PerfilAdmin
 {
     public partial class EditarFuncionario : System.Web.UI.Page
     {
+        ////ServiceClient miServicio = new ServiceClient();
         
     }
 }

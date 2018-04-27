@@ -41,7 +41,7 @@
     <br />
     <br />
     <br />
-    <asp:DropDownList ID="DropDownList1" runat="server">
+    <asp:DropDownList ID="DropDownList_Grupos" runat="server">
         <asp:ListItem Selected="True">Seleccione un Grupo</asp:ListItem>
         <asp:ListItem>Grupo1</asp:ListItem>
         <asp:ListItem>Grupo1</asp:ListItem>
@@ -59,7 +59,9 @@
     <br />
     <br />
     <br />
-    <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
+    <asp:Label ID="Label_Msj_SinGrupos" runat="server"></asp:Label>
+    <br />
+    <asp:ListBox ID="ListBox_GruposAgregados" runat="server"></asp:ListBox>
     <br />
     <br />
     <asp:Button ID="Button_NewTramite" runat="server" OnClick="Button_NewTramite_Click" Text="Crear Tramite" />

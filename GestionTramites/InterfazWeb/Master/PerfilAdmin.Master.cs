@@ -61,5 +61,11 @@ namespace InterfazWeb.Master
         {
             Response.Redirect("~/PerfilAdmin/GuardarEnTxt.aspx");
         }
+
+        
+        protected void LinkButton_ListarGrupos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/PerfilAdmin/ListarGrupos.aspx");
+        }
     }
 }

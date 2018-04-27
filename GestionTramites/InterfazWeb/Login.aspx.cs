@@ -1,5 +1,4 @@
 ﻿using System;
-using Dominio;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -8,7 +7,7 @@ namespace InterfazWeb
 {
     public partial class Login : System.Web.UI.Page
     {
-        GestionTramites prov = new GestionTramites();
+        Object servicio;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -18,23 +17,23 @@ namespace InterfazWeb
         {
             string usuario = LoginInicio.UserName;
             string password = LoginInicio.Password;
-            EnumPerfil perfilUsuario = prov.ValidarUsuario(usuario, password);
-            if (perfilUsuario != EnumPerfil.NoAutorizado)
+            int perfilUsuario = 0; // servicio.WCFValidarUsuario(usuario, password);
+            if (perfilUsuario != 0) // != EnumPerfil.NoAutorizado
             {
                 //Asigno a la sesion el tipo
                 Session["perfilUsuario"] = perfilUsuario;
                 //Asigno a la sesión el Nombre y Apellido
-                Session["nombreUsuario"] = prov.GetNombreCompleto(usuario);
+                Session["nombreUsuario"] = ""; // servicio.WCFGetNombreCompleto(usuario);
                 //Asigno el usuario a la sesión
                 Session["usuarioLogueado"] = usuario;
                 //Autenticación exitosa
                 e.Authenticated = true;
                 //Re-dirijo a la home de cada perfil
-                if (perfilUsuario == EnumPerfil.Admin)
+                if (perfilUsuario == 1) //Es Admin (EnumPerfil.Admin)
                 {
                     Response.Redirect("Bienvenidos/BienvenidoAdmin.aspx");
                 }
-                else if (perfilUsuario == EnumPerfil.FuncionarioMantenimiento)
+                else if (perfilUsuario == 2) //EsFunc Mantenimiento (EnumPerfil.FuncionarioMantenimiento)
                 {
                     Response.Redirect("Bienvenidos/BienvenidoFMantenimiento.aspx");
                 }
@@ -47,15 +46,6 @@ namespace InterfazWeb
             {
                 e.Authenticated = false;
             }
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            string cadenaConexion = ConfigurationManager.ConnectionStrings["conexionGestionTramites"].ConnectionString;
-            SqlConnection cn = new SqlConnection(cadenaConexion);
-            cn.Open();
-            Label1.Text = "Conectado";
-            cn.Close();
         }
     }
 }

@@ -22,11 +22,11 @@ namespace Dominio
 
         #region BUSCAR USUARIO
 
-        public static EnumPerfil ObtenerRol(string email, string password)
+        public int ObtenerRol()
         {
-            EnumPerfil perfilUsuario = EnumPerfil.Anonimo;
+            int perfilUsuario = 0; //Por defecto no Autorizado
 
-            string consulta = @"SELECT idRol FROM Usuario WHERE email='" + email + "' AND password='" + Usuario.MD5Hash(password) + "';";
+            string consulta = @"SELECT idRol FROM Usuario WHERE email='" + Email + "' AND password='" + Usuario.MD5Hash(Password) + "';";
             SqlConnection cn = Conexion.CrearConexion();
             SqlCommand cmd = new SqlCommand(consulta, cn);
             try
@@ -38,15 +38,15 @@ namespace Dominio
                     string perfil = dr["idRol"].ToString();
                     if (perfil.Equals("1"))
                     {
-                        perfilUsuario = EnumPerfil.Admin;
+                        perfilUsuario = 1; //EnumPerfil.Admin
                     }
                     else if (perfil.Equals("2"))
                     {
-                        perfilUsuario = EnumPerfil.FuncionarioMantenimiento;
+                        perfilUsuario = 2; //EnumPerfil.FuncionarioMantenimiento
                     }
                     else
                     {
-                        perfilUsuario = EnumPerfil.Anonimo;
+                        perfilUsuario = 3; //EnumPerfil.Anonimo
                     }
                 }
                 dr.Close();
@@ -63,6 +63,35 @@ namespace Dominio
             }
         }
 
+        
+        public static string ObtenerNombreCompleto(string emailUsuario)
+        {
+            string nombreCompleto = "Sin nombre";
+
+            string consulta = @"SELECT nombreCompleto FROM Usuario WHERE email='" + emailUsuario + "';";
+            SqlConnection cn = Conexion.CrearConexion();
+            SqlCommand cmd = new SqlCommand(consulta, cn);
+            try
+            {
+                Conexion.AbrirConexion(cn);
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    nombreCompleto = dr["nombreCompleto"].ToString();
+                }
+                dr.Close();
+                return nombreCompleto;
+            }
+            catch (Exception ex)
+            {
+                Debug.Assert(false, ex.Message);
+                return nombreCompleto;
+            }
+            finally
+            {
+                Conexion.CerrarConexion(cn);
+            }
+        }
 
         #endregion
 

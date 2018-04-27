@@ -49,6 +49,15 @@ namespace InterfazWeb.PerfilAdmin {
         protected global::System.Web.UI.WebControls.Panel PanelDatosGrupo;
         
         /// <summary>
+        /// Control Label_Id.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Id;
+        
+        /// <summary>
         /// Control LabelNombre.
         /// </summary>
         /// <remarks>

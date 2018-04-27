@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-using Dominio;
 
 // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
 [ServiceContract]
@@ -11,45 +10,101 @@ public interface IService
     /***    NEWS WCF    ***/
     [OperationContract]
     bool WCFAddGrupo(string nombreGrupo);
-
-
+    
     [OperationContract]
-    bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<GrupoTramite> gruposTramite);
+    bool WCFAddTramite(string titulo, string desc, double costo, int tiempo, List<DTOGrupoTramite> gruposTramite);
 
-   
+	
     [OperationContract]
     bool WCFGuardarTxt();
+
 
     [OperationContract]
     bool WCFExisteNombreTramite(string nombreTramite);
 
 
     [OperationContract]
-    List<Grupo> WCFGetGrupo();
+    List<DTOGrupo> WCFGetGrupo();
+
+    [OperationContract]
+    List<DTOGrupo> WCFListarGrupos();
+
+    [OperationContract]
+    DTOGrupo WCFObtenerGrupoPorId(int idGrupo);
+
+    [OperationContract]
+    void WCFEditGrupo(int idGrupo, string nombreGrupo);
+
+
+    [OperationContract]
+    int WCFValidarUsuario(string usuario, string password);
+
+    [OperationContract]
+    string WCFGetNombreCompleto(string nombreUsuario);
+
+
+    [OperationContract]
+    List<DTOGrupo> WCFListarGruposVacios();
+
+    [OperationContract]
+    void WCFEliminarGrupo(string nombreGrupo);
 
 
 
-    // TODO: agregue aquí sus operaciones de servicio
 }
 
 // Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.
 [DataContract]
-public class CompositeType
+public class DTOGrupo
 {
-    bool boolValue = true;
-    string stringValue = "Hello ";
+    int codigo;
+    string nombre;
 
     [DataMember]
-    public bool BoolValue
+    public int Codigo
     {
-        get { return boolValue; }
-        set { boolValue = value; }
+        get { return codigo; }
+        set { codigo = value; }
     }
 
     [DataMember]
-    public string StringValue
+    public string Nombre
     {
-        get { return stringValue; }
-        set { stringValue = value; }
+        get { return nombre; }
+        set { nombre = value; }
     }
+
+}
+
+
+[DataContract]
+public class DTOGrupoTramite
+{
+    public string descripcion { get; set; }
+    public int cantidadMaxFuncionarios { get; set; }
+    public DTOGrupo grupo { get; set; }
+
+
+    [DataMember]
+    public string Descripcion
+    {
+        get { return descripcion; }
+        set { descripcion = value; }
+    }
+
+    [DataMember]
+    public int CantidadMaxFuncionarios
+    {
+        get { return cantidadMaxFuncionarios; }
+        set { cantidadMaxFuncionarios = value; }
+    }
+
+
+    [DataMember]
+    public DTOGrupo Grupo
+    {
+        get { return grupo; }
+        set { grupo = value; }
+    }
+    
 }

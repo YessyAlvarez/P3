@@ -18,8 +18,18 @@ C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\AccesosDB\obj\De
 C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.csproj.CoreCompileInputs.cache
 C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.dll
 C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.pdb
-C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\AccesosDB\bin\Debug\AccesosDB.dll
-C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\AccesosDB\bin\Debug\AccesosDB.pdb
-C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.csprojResolveAssemblyReference.cache
-C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.dll
-C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\P3\GestionTramites\AccesosDB\bin\Debug\AccesosDB.dll
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\P3\GestionTramites\AccesosDB\bin\Debug\AccesosDB.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.dll
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\Obligatorio\P3\GestionTramites\AccesosDB\obj\Debug\AccesosDB.pdb
+C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\nuevo\GestionTramites\AccesosDB\bin\Debug\AccesosDB.dll
+C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\nuevo\GestionTramites\AccesosDB\bin\Debug\AccesosDB.pdb
+C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\nuevo\GestionTramites\AccesosDB\obj\Debug\AccesosDB.csprojResolveAssemblyReference.cache
+C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\nuevo\GestionTramites\AccesosDB\obj\Debug\AccesosDB.csproj.CoreCompileInputs.cache
+C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\nuevo\GestionTramites\AccesosDB\obj\Debug\AccesosDB.dll
+C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\nuevo\GestionTramites\AccesosDB\obj\Debug\AccesosDB.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\AccesosDB\bin\Debug\AccesosDB.dll
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\AccesosDB\bin\Debug\AccesosDB.pdb
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\AccesosDB\obj\Debug\AccesosDB.csprojResolveAssemblyReference.cache
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\AccesosDB\obj\Debug\AccesosDB.dll
+C:\Users\Diseño\Documents\Yes!\Facu\P3 - 2018\P3\nuevo\GestionTramites\AccesosDB\obj\Debug\AccesosDB.pdb
