@@ -1,2 +1,0 @@
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites - Copy\Dominio\obj\Debug\Dominio.csprojResolveAssemblyReference.cache
-C:\Users\Jessi\Documents\FACU\PROGRAMACION 3\P3\GestionTramites - Copy\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
