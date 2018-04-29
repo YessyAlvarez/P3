@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Web.UI.WebControls;
 using System.Collections.Generic;
+using InterfazWeb.ServiceReference;
 
 namespace InterfazWeb.PerfilAdmin
 {
     public partial class AltaProveedor : System.Web.UI.Page
     {
-        //ServiceClient servicio = new ServiceClient();
-
+        ServiceClient servicio = new ServiceClient();
+        /*
         protected void Page_Load(object sender, EventArgs e)
         {
             //Muestro los paneles
-            PanelStep_Datos.Visible = true;
+            PanelStep_Grupos.Visible = true;
             PanelStep_Grupos.Visible = false;
             PanelStep_Mensaje.Visible = false;
 
@@ -125,8 +126,7 @@ namespace InterfazWeb.PerfilAdmin
                        //Muestro los mensajes
                        Label_Msj.Text = "NO SE PUDO CARGAR EL TRAMITE. INTENTE NUEVAMENTE.";
                    }
-
-                */
+                   
             }
         }
 
@@ -169,7 +169,7 @@ namespace InterfazWeb.PerfilAdmin
             }
 
             
-            /*
+            
             else if (a.WCFExisteNombreTramite(tituloTramite))
             {
                 Label_Titulo_Error.Text = "El nombre del tramite ya existe. Ingrese uno nuevo.";
@@ -178,9 +178,10 @@ namespace InterfazWeb.PerfilAdmin
             //
             //
             //
-            //*/
+            //
 
             return ok;
         }
+*/
     }
 }

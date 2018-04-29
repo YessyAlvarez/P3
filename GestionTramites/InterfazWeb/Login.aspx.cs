@@ -2,12 +2,14 @@
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
+using InterfazWeb.ServiceReference;
 
 namespace InterfazWeb
 {
     public partial class Login : System.Web.UI.Page
     {
-        Object servicio;
+        ServiceClient servicio = new ServiceClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -17,13 +19,13 @@ namespace InterfazWeb
         {
             string usuario = LoginInicio.UserName;
             string password = LoginInicio.Password;
-            int perfilUsuario = 0; // servicio.WCFValidarUsuario(usuario, password);
+            int perfilUsuario = servicio.WCFValidarUsuario(usuario, password);
             if (perfilUsuario != 0) // != EnumPerfil.NoAutorizado
             {
                 //Asigno a la sesion el tipo
                 Session["perfilUsuario"] = perfilUsuario;
                 //Asigno a la sesión el Nombre y Apellido
-                Session["nombreUsuario"] = ""; // servicio.WCFGetNombreCompleto(usuario);
+                Session["nombreUsuario"] = servicio.WCFGetNombreCompleto(usuario);
                 //Asigno el usuario a la sesión
                 Session["usuarioLogueado"] = usuario;
                 //Autenticación exitosa

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/PerfilAdmin.Master" AutoEventWireup="true" CodeBehind="AltaFuncionario.aspx.cs" Inherits="InterfazWeb.PerfilAdmin.AltaProveedor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/PerfilAdmin.Master" AutoEventWireup="true" CodeBehind="AltaFuncionario.aspx.cs" Inherits="InterfazWeb.PerfilAdmin.AltaFuncionario" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -63,7 +63,7 @@
             <br />
             <asp:Button ID="Button_Anterior" runat="server" Text="Anterior" OnClick="Button_Anterior_Click" />
             <br />
-            <asp:Button ID="Button_AltaFuncionario" runat="server" OnClick="Button_AltaFuncionario_Click" Text="Agregar nuevo Funcionario" />
+            <asp:Button ID="Button_AltaFuncionario" runat="server" Text="Agregar nuevo Funcionario" />
             <br />
             <br />
         </asp:Panel>
@@ -74,7 +74,7 @@
             <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
             <br />
             <br />
-            <asp:Button ID="ButtonNewAddProveedor" runat="server" OnClick="ButtonNewAddProveedor_Click" Text="Agregar otro Funcionario" />
+            <asp:Button ID="ButtonNewAddProveedor" runat="server" Text="Agregar otro Funcionario" />
             <br />
         </asp:Panel>
         <p>

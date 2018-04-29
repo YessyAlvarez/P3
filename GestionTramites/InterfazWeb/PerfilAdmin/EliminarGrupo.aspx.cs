@@ -4,13 +4,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections.Generic;
-
+using InterfazWeb.ServiceReference;
 
 namespace InterfazWeb.PerfilAdmin
 {
     public partial class EliminarGrupo : System.Web.UI.Page
     {
-        Object servicio;
+        ServiceClient servicio = new ServiceClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
