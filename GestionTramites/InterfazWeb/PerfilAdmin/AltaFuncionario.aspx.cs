@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Web.UI.WebControls;
 using System.Collections.Generic;
+using InterfazWeb.ServiceReference;
 
 namespace InterfazWeb.PerfilAdmin
 {
     public partial class AltaProveedor : System.Web.UI.Page
     {
-        //ServiceClient servicio = new ServiceClient();
+        ServiceClient servicio = new ServiceClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,10 +25,10 @@ namespace InterfazWeb.PerfilAdmin
 
         protected void cargarGrupos()
         {
-            List<Object> grupos = null; // servicio.WCFListarGrupos();
+            List<DTOGrupo> grupos = servicio.WCFListarGrupos();
             if (grupos != null){
                 DropDownList_Grupos.Items.Clear();
-                //DropDownList_Grupos.DataSource = grupos;
+                DropDownList_Grupos.DataSource = grupos;
                 DropDownList_Grupos.DataBind();
 
                 //Despliego acciones para grupos
@@ -182,5 +183,7 @@ namespace InterfazWeb.PerfilAdmin
 
             return ok;
         }
+
+        
     }
 }

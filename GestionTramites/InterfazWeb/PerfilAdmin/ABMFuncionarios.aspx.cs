@@ -12,12 +12,12 @@ namespace InterfazWeb.PerfilAdmin
 
         protected void ButtonAltaFuncionario_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AltaFuncionario.aspx");
+            Response.Redirect("~/PerfilAdmin/AltaFuncionario.aspx");
         }
 
         protected void ButtonEditarFuncionario_Click(object sender, EventArgs e)
         {
-            Response.Redirect("EditarFuncionario.aspx");
+            Response.Redirect("~/PerfilAdmin/EditarFuncionario.aspx");
         }
     }
 

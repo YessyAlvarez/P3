@@ -30,7 +30,7 @@
             <asp:Label ID="Label_ErrorNombre" runat="server"></asp:Label>
             <br />
             Perfil<br />
-            <asp:DropDownList ID="DropDownList_Perfil" runat="server" OnSelectedIndexChanged="DropDownListAltaVIP_SelectedIndexChanged">
+            <asp:DropDownList ID="DropDownList_Perfil" runat="server">
             </asp:DropDownList>
             <br />
             <br />
@@ -74,7 +74,7 @@
             <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
             <br />
             <br />
-            <asp:Button ID="ButtonNewAddProveedor" runat="server" OnClick="ButtonNewAddProveedor_Click" Text="Agregar otro Funcionario" />
+            <asp:Button ID="ButtonNewAddFuncionario" runat="server" Text="Agregar otro Funcionario" />
             <br />
         </asp:Panel>
         <p>
